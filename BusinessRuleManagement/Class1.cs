@@ -66,6 +66,13 @@ namespace BusinessRuleManagement
         {
             //Activate the membership
             Console.WriteLine("Activate the Membership");
+            //Mail send to customer
+            this.ActivationUpgrade();
+        }
+
+        public void ActivationUpgrade()
+        {
+            Console.WriteLine("Dear Customer: Your Membership has been upgraded");
         }
     }
 
@@ -84,7 +91,14 @@ namespace BusinessRuleManagement
         private void UpgradeMembership()
         {
             Console.WriteLine("Upgrade to Membership");
+            this.ActivationUpgrade();
         }
+
+        public void ActivationUpgrade()
+        {
+            Console.WriteLine("Dear Customer: Your Membership has been upgraded");
+        }
+
     }
 
     /// <summary>

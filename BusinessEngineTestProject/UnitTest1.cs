@@ -42,24 +42,11 @@ namespace BusinessEngineTestProject
         }
 
         [TestMethod]
-        public void MembershipOrUpgradePaymentTest()
-        {
-
-        }
-
-        [TestMethod]
         public void VideoToSkiPaymentTest()
         {
             PaymentModule product = new PaymentModule(new VideoToSki());
             bool result =  product.PayForTheProduct(0.0);
             Assert.Equals(result, true);
         }
-
-        [TestMethod]
-        public void BookOrPhysicalProductPaymentTest()
-        {
-
-        }
-
     }
 }
