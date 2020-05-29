@@ -9,6 +9,6 @@ namespace BusinessRuleManagement
         /// <summary>
         /// Commision paymnet to an agent
         /// </summary>
-        void CommisionPaymentToAgent();
+       void CommisionPaymentToAgent();
     }
 }

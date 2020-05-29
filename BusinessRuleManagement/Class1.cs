@@ -15,7 +15,7 @@ namespace BusinessRuleManagement
     /// <summary>
     /// Physical Product Class
     /// </summary>
-    public class PhysicalProduct : BusinessRulesEngine
+    public class PhysicalProduct : BusinessRulesEngine, ICommisionPayment
     {
         public override bool Pay(double amount)
         {
@@ -28,13 +28,19 @@ namespace BusinessRuleManagement
         {
             //code goes here for generating packing slip.
             Console.WriteLine("Generate packing Slip");
+            this.CommisionPaymentToAgent();
+        }
+
+         public void CommisionPaymentToAgent()
+        {
+            Console.WriteLine("Payment to the agent");
         }
     }
 
     /// <summary>
     /// Book Class
     /// </summary>
-    public class Book : BusinessRulesEngine
+    public class Book : BusinessRulesEngine, ICommisionPayment
     {
         public override bool Pay(double amount)
         {
@@ -47,6 +53,12 @@ namespace BusinessRuleManagement
         {
             //Generate duplicate packing slip for royale department
             Console.WriteLine("Generate Duplicate packing sllip for royale department");
+            this.CommisionPaymentToAgent();
+        }
+
+        public void CommisionPaymentToAgent()
+        {
+            Console.WriteLine("Payment to the agent");
         }
     }
 
