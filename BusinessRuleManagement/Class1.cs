@@ -53,7 +53,7 @@ namespace BusinessRuleManagement
     /// <summary>
     /// Membership Class
     /// </summary>
-    public class Membership : BusinessRulesEngine
+    public class Membership : BusinessRulesEngine, IEmailNotification
     {
         public override bool Pay(double amount)
         {
@@ -72,7 +72,7 @@ namespace BusinessRuleManagement
     /// <summary>
     /// Upgrade to membership Class
     /// </summary>
-    public class UpgradeToMembership : BusinessRulesEngine
+    public class UpgradeToMembership : BusinessRulesEngine, IEmailNotification
     {
         public override bool Pay(double amount)
         {
@@ -104,4 +104,6 @@ namespace BusinessRuleManagement
             Console.WriteLine("Add first free aid video");
         }
     }
+
+    
 }
